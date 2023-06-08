@@ -114,7 +114,6 @@ const Component = () => {
     } catch (e) {
       console.error(e);
     }
-    console.log(contract.estimateGas.mint);
   }, [])
 
   const logout = async () => {
