@@ -66,7 +66,7 @@ export default async function handler(
     }
 
     setCookie(res, 'Ultiverse_Demo_Authorization', `${refershRes.refreshToken}******${uid}`, { maxAge: 24 * 3600 * 7 * 1000, path: '/', domain: process.env.USER_COOKIE_DOMAIN });
-    res.status(200).json({ success: true, data: { ...(data || {}), wallets, twitterToken: undefined, dcRefreshToken: undefined } });
+    res.status(200).json({ success: true, data: { ...(data || {}), wallets } });
   } catch (e) {
     console.log('Error', e);
     res.status(500).json({ success: false, err: ServerErrorStatus.ServerError });
