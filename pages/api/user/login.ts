@@ -3,19 +3,9 @@ import { ServerErrorStatus } from 'types/error';
 import { client_id, client_secret } from 'libs/consts';
 import { setCookie, formatBody } from 'libs/service';
 
-export type SignResponse = {
-  success: true;
-  data: {
-    message: string;
-  };
-} | {
-  success: false;
-  err: ServerErrorStatus;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<SignResponse>
+  res: NextApiResponse
 ) {
   const { code, uid } = req.body;
 
