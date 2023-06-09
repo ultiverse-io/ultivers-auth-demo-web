@@ -9,7 +9,7 @@ import { config, chains } from 'libs/wagmi'
 import { fetchUserInfo, loginByCode, logoutAccount } from 'libs/auth'
 import { redirectToAuth, getWalletInfo, loginWallet, getWalletProvider } from 'libs/auth/core'
 import { formatAddress, calculateGasMargin } from 'libs/helpers'
-import { disconnect, getContract, getWalletClient } from '@wagmi/core'
+import { disconnect } from '@wagmi/core'
 import { test_chain_id } from 'libs/consts';
 
 import ABI from 'config/abi.json';
@@ -129,7 +129,6 @@ const Component = () => {
 
   useEffect(() => {
     if (connector) {
-      connector.getWalletClient()
       Promise.all([
         connector.getAccount(),
         connector.getChainId(),
