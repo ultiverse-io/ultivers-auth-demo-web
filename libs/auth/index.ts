@@ -25,7 +25,7 @@ init();
 
 export const fetchUserInfo = async () => {
   const request = getRequest();
-  const { data } = (await request.get('/api/user/info').catch(() => ({ success: false, data: null })) as UserInfoResponse);
+  const { data } = (await request.post('/api/user/info').catch(() => ({ success: false, data: null })) as UserInfoResponse);
 
   return data;
 }
