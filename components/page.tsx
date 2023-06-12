@@ -61,17 +61,15 @@ const Component = () => {
       const { success } = await loginByCode();
 
       if (success) {
-        await updateUserInfo();
-      }
+        const { info } = getWalletInfo();
+        if (!info) {
+          await loginWallet(wallet_access_token);
+        }
 
-      const { info } = getWalletInfo();
-      if (!info) {
-        await loginWallet(wallet_access_token);
+        setLoading(false);
+        router.replace('/');
+        return;
       }
-
-      setLoading(false);
-      router.replace('/');
-      return;
     }
 
     await updateUserInfo();
