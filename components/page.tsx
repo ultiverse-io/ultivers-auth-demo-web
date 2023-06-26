@@ -7,7 +7,7 @@ import { WagmiConfig, useAccount } from 'wagmi'
 import { RainbowKitProvider, useConnectModal } from '@rainbow-me/rainbowkit'
 import { config, chains } from 'libs/wagmi'
 import { fetchUserInfo, loginByCode, logoutAccount } from 'libs/auth'
-import { redirectToAuth, getWalletInfo, loginWallet, getWalletProvider } from 'libs/auth/core'
+import { redirectToAuth, getWalletInfo, loginWallet, getWalletProvider } from 'libs/auth/ejs'
 import { formatAddress, calculateGasMargin } from 'libs/helpers'
 import { disconnect } from '@wagmi/core'
 import { test_chain_id } from 'libs/consts';

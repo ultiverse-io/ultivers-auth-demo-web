@@ -1,5 +1,5 @@
-import { setup, logoutWallet } from './core';
-import { UserInfo } from './core/interface'
+import { setup, logoutWallet } from './ejs';
+import { UserInfo } from './ejs'
 import { getRequest } from '../request';
 import { client_id, client_key, test_chain_id } from 'libs/consts';
 

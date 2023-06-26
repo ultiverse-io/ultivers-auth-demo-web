@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./index-20775dd4.cjs");exports.getWalletInfo=e.getWalletInfo;exports.getWalletProvider=e.getWalletProvider;exports.loginWallet=e.loginWallet;exports.logoutWallet=e.logoutWallet;exports.redirectToAuth=e.redirectToAuth;exports.setup=e.setup;
